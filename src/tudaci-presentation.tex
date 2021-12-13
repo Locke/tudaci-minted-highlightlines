@@ -1,0 +1,63 @@
+\documentclass[aspectratio=169]{tudabeamer}
+
+\usepackage{minted}
+
+\begin{document}
+
+
+\begin{frame}[fragile]{Test 1a: no problem with \textbackslash scriptsize, if no `[]` in code line}
+    \begin{minted}[linenos,xleftmargin=0.6cm,fontsize=\scriptsize,highlightlines={3},highlightcolor=green!10]{java}
+class Main {
+    public static void main(String[] args) {
+        System.out.println("a_0: " + /* TODO */);
+    }
+}
+    \end{minted}
+\end{frame}
+
+
+\begin{frame}[fragile]{Test 1b: no problem with \textbackslash scriptsize, if no `[]` in code line}
+    \begin{minted}[linenos,xleftmargin=0.6cm,fontsize=\scriptsize,highlightlines={2-3},highlightcolor=green!10]{java}
+class Main {
+    public static void main(String[] args) {
+        System.out.println("a_0: " + /* TODO */);
+    }
+}
+    \end{minted}
+\end{frame}
+
+
+\begin{frame}[fragile]{Test 2a: problem, with \textbackslash scriptsize (see next slide)}
+    \begin{minted}[linenos,xleftmargin=0.6cm,fontsize=\scriptsize,highlightlines={3},highlightcolor=green!10]{java}
+class Main {
+    public static void main(String[] args) {
+        System.out.println("a_0: " + args[0]);
+    }
+}
+    \end{minted}
+\end{frame}
+
+
+\begin{frame}[fragile]{Test 2b: problem, with \textbackslash scriptsize}
+    \begin{minted}[linenos,xleftmargin=0.6cm,fontsize=\scriptsize,highlightlines={2-3},highlightcolor=green!10]{java}
+class Main {
+    public static void main(String[] args) {
+        System.out.println("a_0: " + args[0]);
+    }
+}
+    \end{minted}
+\end{frame}
+
+
+\begin{frame}[fragile]{Test 3: no problem, with \textbackslash footnotesize}
+    \begin{minted}[linenos,xleftmargin=0.6cm,fontsize=\footnotesize,highlightlines={2-3},highlightcolor=green!10]{java}
+class Main {
+    public static void main(String[] args) {
+        System.out.println("a_0: " + args[0]);
+    }
+}
+    \end{minted}
+\end{frame}
+
+
+\end{document}
